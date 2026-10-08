@@ -12,9 +12,11 @@
 
 .header__bar {
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 18px;
   min-height: var(--header-h);
+  min-width: 0;
 }
 
 .brand {
@@ -64,13 +66,14 @@
   align-items: center;
   gap: 2px;
   margin-left: auto;
+  min-width: 0;
 }
 
 .nav__link {
   position: relative;
-  padding: 9px 10px;
+  padding: 9px 8px;
   border-radius: 8px;
-  font-size: 0.87rem;
+  font-size: 0.85rem;
   font-weight: 500;
   color: var(--ink);
   white-space: nowrap;

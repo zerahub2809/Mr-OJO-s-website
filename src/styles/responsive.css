@@ -19,6 +19,7 @@
   }
   .hero__visual {
     max-width: 520px;
+    width: 100%;
   }
   .hero__badge-float {
     left: auto;
@@ -43,6 +44,23 @@
   .gallery-item--tall {
     grid-row: span 1;
     min-height: 260px;
+  }
+  /* 4 footer columns are too cramped on tablets — drop to 2. */
+  .footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 34px;
+  }
+  .footer__bottom {
+    justify-content: flex-start;
+  }
+}
+
+/* Single column on phones. This rule must live AFTER the 2-column rule
+   above (same file, later cascade) so it is the one that wins. */
+@media (max-width: 600px) {
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 }
 

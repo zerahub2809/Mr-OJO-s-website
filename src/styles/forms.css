@@ -39,7 +39,9 @@
 .form-field select,
 .form-field textarea {
   font-family: var(--font-body);
-  font-size: 0.95rem;
+  /* 16px minimum stops iOS/Android from zooming the page when an input
+     is focused — prevents the "jump" when the on-screen keyboard opens. */
+  font-size: 1rem;
   color: var(--ink);
   padding: 12px 14px;
   border: 1.5px solid var(--line);
@@ -47,6 +49,8 @@
   background: var(--cream);
   transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .form-field input:focus,

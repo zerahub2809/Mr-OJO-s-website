@@ -17,6 +17,10 @@ npm install
 npm run dev       # local dev server → http://localhost:5173
 npm run build     # production build → dist/
 npm run preview   # preview the production build
+npm run smoke     # SSR smoke test: renders every route
+npm run test:responsive  # headless-browser test: 23 viewport widths × 11 routes
+                         # (horizontal overflow, element overflow, sticky header,
+                         #  mobile-menu overflow)
 ```
 
 ## Phase 1 (MVP) coverage

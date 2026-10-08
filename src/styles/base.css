@@ -10,6 +10,13 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  /* Reserve the scrollbar gutter so nothing shifts when the mobile
+     menu locks body scroll or page content grows/shrinks. */
+  scrollbar-gutter: stable;
+  /* Root-level horizontal clip: the viewport itself must never expand
+     sideways (off-screen drawer, wide children, stray absolutes).
+     Vertical scrolling and position: sticky are unaffected by `clip`. */
+  overflow-x: clip;
 }
 
 body {
@@ -20,12 +27,42 @@ body {
   color: var(--ink);
   background: var(--cream);
   -webkit-font-smoothing: antialiased;
+  /* Safety net: never allow accidental horizontal page scrolling.
+     `clip` (not `hidden`) keeps position: sticky working. */
+  overflow-x: clip;
+  /* Long words / e-mails / URLs wrap instead of widening the layout.
+     `anywhere` (unlike `break-word`) also shrinks min-content, so flex
+     and grid children can no longer be pushed wider than the viewport. */
+  overflow-wrap: anywhere;
 }
 
 img,
 svg {
   display: block;
   max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+/* Anchor targets clear the sticky header (no jump-to-under-header). */
+[id] {
+  scroll-margin-top: calc(var(--header-h) + 18px);
+}
+
+/* Grid/flex children default to min-width:auto which lets wide content
+   push a track past the viewport — clamp them so tracks stay flexible. */
+.grid > *,
+.split > *,
+.hero__grid > *,
+.steps > *,
+.form-grid > *,
+.footer__grid > *,
+.trust-strip__grid > *,
+.gallery-grid > *,
+.stats > * {
+  min-width: 0;
 }
 
 h1,
@@ -142,6 +179,11 @@ button {
 
 .visually-hidden {
   position: absolute;
+  /* Pin to the top-left of its containing block: inside wide tables the
+     static position would sit beyond the viewport and create page-level
+     horizontal overflow even though the element is invisible. */
+  left: 0;
+  top: 0;
   width: 1px;
   height: 1px;
   overflow: hidden;

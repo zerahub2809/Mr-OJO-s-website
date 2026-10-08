@@ -8,12 +8,16 @@
   z-index: 99;
   padding: 22px 20px 40px;
   overflow-y: auto;
+  overscroll-behavior: contain;
   transform: translateX(100%);
-  transition: transform 0.28s ease;
+  /* Hidden when closed so it can never be tabbed into or affect layout. */
+  visibility: hidden;
+  transition: transform 0.28s ease, visibility 0.28s ease;
 }
 
 .mobile-nav.is-open {
   transform: translateX(0);
+  visibility: visible;
 }
 
 .mobile-nav a.mobile-nav__link {
@@ -178,7 +182,9 @@
 /* ============================================================
    Header responsive
    ============================================================ */
-@media (max-width: 1160px) {
+/* The full nav (7 links + Explore + CTAs) needs ~1310px of real space;
+   below 1320px it would squeeze/overflow, so switch to the drawer earlier. */
+@media (max-width: 1320px) {
   .nav,
   .header__actions .btn {
     display: none;
@@ -202,9 +208,5 @@
     padding: 15px;
     right: 16px;
     bottom: 16px;
-  }
-  .footer__grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
   }
 }
