@@ -1,0 +1,105 @@
+/* ============================================================
+   Buttons
+   ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 26px;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease,
+    color 0.18s ease, border-color 0.18s ease;
+  text-align: center;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--soft-gold);
+  outline-offset: 2px;
+}
+
+.btn--primary {
+  background: var(--green);
+  color: var(--white);
+  box-shadow: 0 8px 20px rgba(27, 94, 32, 0.28);
+}
+
+.btn--primary:hover {
+  background: var(--green-dark);
+  color: var(--white);
+}
+
+.btn--gold {
+  background: linear-gradient(135deg, var(--gold), #e6b52e);
+  color: var(--green-deep);
+  box-shadow: 0 8px 20px rgba(212, 160, 23, 0.32);
+}
+
+.btn--gold:hover {
+  filter: brightness(1.05);
+  color: var(--green-deep);
+}
+
+.btn--outline {
+  background: transparent;
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.btn--outline:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
+.btn--outline-light {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.65);
+  color: var(--white);
+}
+
+.btn--outline-light:hover {
+  background: var(--white);
+  color: var(--green);
+  border-color: var(--white);
+}
+
+.btn--whatsapp {
+  background: #25d366;
+  color: #07340f;
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+}
+
+.btn--whatsapp:hover {
+  background: #1fbe5a;
+  color: #07340f;
+}
+
+.btn--sm {
+  padding: 9px 18px;
+  font-size: 0.86rem;
+}
+
+.btn--lg {
+  padding: 16px 34px;
+  font-size: 1.02rem;
+}
+
+.btn--block {
+  width: 100%;
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}

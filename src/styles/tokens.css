@@ -1,0 +1,39 @@
+/* ============================================================
+   Iya Sade Oke Ogun Heritage — Design Tokens
+   ============================================================ */
+:root {
+  /* Brand palette */
+  --green: #1b5e20;
+  --green-dark: #103f14;
+  --green-deep: #0b2e0e;
+  --gold: #d4a017;
+  --gold-dark: #a97e0d;
+  --cream: #fdf8f0;
+  --brown: #5d4037;
+  --brown-light: #795548;
+  --white: #ffffff;
+  --leaf: #4caf50;
+  --soft-gold: #f5d76e;
+
+  /* Semantic */
+  --ink: #213021;
+  --ink-soft: #4a5a4b;
+  --line: #e7dfcd;
+  --line-soft: #f0e9da;
+  --danger: #b3261e;
+  --success: #1b7a36;
+
+  /* Typography */
+  --font-heading: 'Fraunces', 'Georgia', serif;
+  --font-body: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  /* Layout */
+  --container: 1180px;
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 22px;
+  --shadow-sm: 0 2px 8px rgba(17, 46, 20, 0.06);
+  --shadow: 0 10px 30px rgba(17, 46, 20, 0.1);
+  --shadow-lg: 0 24px 60px rgba(17, 46, 20, 0.16);
+  --header-h: 76px;
+}

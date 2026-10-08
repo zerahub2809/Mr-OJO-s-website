@@ -1,0 +1,51 @@
+/** Customer testimonials — sample content highlighting quality & standards. */
+export const testimonials = [
+  {
+    name: 'Folake Adeniyi',
+    role: 'Home cook, Ibadan',
+    initials: 'FA',
+    color: '#1B5E20',
+    rating: 5,
+    text: 'The elubo stretches beautifully and there is no stone or sand in it. You can tell it was processed by people who actually care about hygiene. My children now insist on Iya Sade only.',
+  },
+  {
+    name: 'Chinedu Okafor',
+    role: 'Restaurant owner, Lagos',
+    initials: 'CO',
+    color: '#5D4037',
+    rating: 5,
+    text: 'I order 50kg bags of garri every month for my amala spot. Consistent grain, clean smell, always on time. Their batch coding on the packaging gives me confidence in traceability.',
+  },
+  {
+    name: 'Bisi Aremu',
+    role: 'Bulk buyer, Abuja',
+    initials: 'BA',
+    color: '#D4A017',
+    rating: 5,
+    text: 'I book my December elubo supply in November every year and it has never failed me. Their seasonal advisory helped me plan my stock properly — no more festive-season shortages.',
+  },
+  {
+    name: 'Tunde Balogun',
+    role: 'Diaspora customer (UK) — family orders',
+    initials: 'TB',
+    color: '#4CAF50',
+    rating: 5,
+    text: 'I send orders to my mother in Ibadan straight through WhatsApp. Photos of the processing floor, clear labelling, no additives — that transparency is why I trust them from abroad.',
+  },
+  {
+    name: 'Grace Nwosu',
+    role: 'School canteen manager, Oyo',
+    initials: 'GN',
+    color: '#795548',
+    rating: 5,
+    text: 'Their maize is properly dried — we had zero weevil damage after three months of storage. You can see the quality checks are not just written on the website, they are real.',
+  },
+  {
+    name: 'Musa Adeyemi',
+    role: 'Supermarket procurement, Lagos',
+    initials: 'MA',
+    color: '#A97E0D',
+    rating: 5,
+    text: 'Labelling, packaging, delivery documentation — everything arrives professional. They are the only local supplier whose standards matched what our compliance team expected.',
+  },
+];
